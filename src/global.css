@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #812ec5;
+    --secondary-color: #63768D;
+    --text-color: #333333;
+
+    --font-header: "DynaPuff", cursive, sans-serif;
+}
+
+@font-face {
+    font-family: "DynaPuff";
+    src: url("/assets/fonts/DynaPuff-SemiBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    font-family: sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-header);
+}
+
+.app_container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.main_container {
+    flex: 1;
+}
