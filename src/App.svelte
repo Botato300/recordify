@@ -5,7 +5,7 @@
 
 <nav>
     <a href="/" class="logo">
-        <img src="/assets/images/logo-128.webp" width="64" height="64" alt="Logo de Recordify" />
+        <img src="/images/logo-128.webp" width="64" height="64" alt="Logo de Recordify" />
         Recordify
     </a>
 </nav>
