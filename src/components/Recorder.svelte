@@ -40,6 +40,11 @@
             }, 1000);
         } catch (error) {
             console.error("Error on startRecording:", error);
+
+            if (error instanceof DOMException && error.name === "NOT_SUPPORTED_ERR") {
+                showUnsupportedBrowserMessage();
+            }
+
             stopRecording();
         }
     }
@@ -57,7 +62,7 @@
 
     function handleRecording() {
         if (!checkCompatibility()) {
-            alert("Browser not compatible with screen recording.");
+            showUnsupportedBrowserMessage();
             return;
         }
 
@@ -85,6 +90,10 @@
             console.error("Error checking compatibility:", error);
             return false;
         }
+    }
+
+    function showUnsupportedBrowserMessage() {
+        alert("Your browser does not support screen recording.");
     }
 </script>
 
