@@ -1,7 +1,6 @@
 <script>
     import Recorder from "@/components/Recorder.svelte";
-
-    const currentYear = new Date().getFullYear();
+    import Footer from "@/components/Footer.svelte";
 </script>
 
 <nav>
@@ -16,24 +15,11 @@
     <Recorder />
 </main>
 
-<footer>
-    Hecho por <a href="https://tomasbottari.com/" target="_blank">Tomás Bottari</a> - {currentYear}
-</footer>
+<Footer />
 
 <style>
     nav {
         padding: 10px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        color: #666666;
-        font-style: italic;
-    }
-
-    footer a {
-        color: var(--secondary-color);
     }
 
     .logo {
