@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Recorder from "@/components/Recorder.svelte";
     import Footer from "@/components/Footer.svelte";
 </script>

@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
     let recording = $state(false);
     let recordedTime = $state(0);
 
-    let stream = $state(null);
+    let stream: MediaStream | null = $state(null);
 
-    let intervalId = null;
-    let mediaRecorder = null;
-    let chunks = [];
+    let intervalId = 0;
+    let mediaRecorder: MediaRecorder | null = null;
+    let chunks: Blob[] = [];
 
     const displayMediaOptions = {
         video: {
@@ -48,8 +48,9 @@
         recording = false;
         recordedTime = 0;
 
-        stream.getTracks().forEach((track) => track.stop());
-        mediaRecorder.stop();
+        if (stream) stream.getTracks().forEach((track) => track.stop());
+
+        if (mediaRecorder) mediaRecorder.stop();
 
         clearInterval(intervalId);
     }
@@ -77,7 +78,7 @@
 
     function checkCompatibility() {
         try {
-            if ("mediaDevices" in navigator && navigator.mediaDevices.getDisplayMedia) return true;
+            if ("mediaDevices" in navigator && typeof navigator.mediaDevices.getDisplayMedia === "function") return true;
 
             return false;
         } catch (error) {
@@ -98,7 +99,7 @@
 
     <!-- prevent the video from flickering by placing it in another conditional block -->
     {#if recording}
-        <video srcobject={stream} width="800" height="500" autoplay></video>
+        <video srcobject={stream ?? undefined} width="800" height="500" autoplay></video>
     {/if}
 </div>
 
