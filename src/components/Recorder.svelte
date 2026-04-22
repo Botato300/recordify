@@ -40,8 +40,7 @@
             }, 1000);
         } catch (error) {
             console.error("Error on startRecording:", error);
-
-            if (error instanceof DOMException && error.name === "NOT_SUPPORTED_ERR") {
+            if (error instanceof DOMException && error.name === "NotSupportedError") {
                 showUnsupportedBrowserMessage();
             }
 
