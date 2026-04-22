@@ -30,14 +30,7 @@
 
             recording = true;
 
-            intervalId = setInterval(() => {
-                if (recordedTime >= 10) {
-                    stopRecording();
-                    return;
-                }
-
-                recordedTime += 1;
-            }, 1000);
+            intervalId = setInterval(() => (recordedTime += 1), 1000);
         } catch (error) {
             console.error("Error on startRecording:", error);
             if (error instanceof DOMException && error.name === "NotSupportedError") {
