@@ -44,6 +44,7 @@
     function stopRecording() {
         recording = false;
         recordedTime = 0;
+        chunks = [];
 
         if (stream) stream.getTracks().forEach((track) => track.stop());
 
