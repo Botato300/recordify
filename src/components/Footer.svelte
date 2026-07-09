@@ -3,8 +3,7 @@
 </script>
 
 <footer>
-    <span class="credits">Hecho por <a href="https://tomasbottari.com/" target="_blank">Tomás Bottari</a> - {currentYear}</span>
-
+    <span class="credits">Made by <a href="https://tomasbottari.com/" target="_blank">Tomás Bottari</a> - {currentYear}</span>
     <a class="githubLink" href="https://github.com/Botato300/recordify" target="_blank">
         <svg width="98" height="96" viewBox="0 0 98 96" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_730_27126)">

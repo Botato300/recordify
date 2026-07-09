@@ -5,13 +5,13 @@
 
 <nav>
     <a href="/" class="logo">
-        <img src="/images/logo-128.webp" width="64" height="64" alt="Logo de Recordify" />
+        <img src="/images/logo-128.webp" width="64" height="64" alt="Recordify Logo" />
         Recordify
     </a>
 </nav>
 
 <main class="main_container">
-    <h1 class="title">Graba tu pantalla fácilmente</h1>
+    <h1 class="title">Record your screen easily</h1>
     <Recorder />
 </main>
 

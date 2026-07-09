@@ -92,11 +92,11 @@
 
 <div class="container">
     <button class="btnPlay" onclick={handleRecording}>
-        {recording ? "Detener" : "Grabar"}
+        {recording ? "Stop" : "Record"}
     </button>
 
     {#if recording}
-        <p>Grabando... {recordedTime}s</p>
+        <p>Recording... {recordedTime}s</p>
     {/if}
 
     <!-- prevent the video from flickering by placing it in another conditional block -->
