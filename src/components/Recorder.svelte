@@ -8,10 +8,14 @@
     let mediaRecorder: MediaRecorder | null = null;
     let chunks: Blob[] = [];
 
-    const displayMediaOptions = {
+    const displayMediaOptions: DisplayMediaStreamOptions = {
         video: {
             displaySurface: "monitor",
             frameRate: 30,
+        },
+        audio: {
+            noiseSuppression: false,
+            echoCancellation: false,
         },
     };
 
@@ -101,7 +105,7 @@
 
     <!-- prevent the video from flickering by placing it in another conditional block -->
     {#if recording}
-        <video srcobject={stream ?? undefined} width="800" height="500" autoplay></video>
+        <video srcobject={stream ?? undefined} width="800" height="500" autoplay muted></video>
     {/if}
 </div>
 
